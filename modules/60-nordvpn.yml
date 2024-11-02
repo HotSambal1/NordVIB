@@ -5,7 +5,3 @@ commands:
   - apt-get install -y curl iputils-ping libc6 wireguard
   - curl https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn_3.19.0_i386.deb --output /tmp/nordrepo.deb
   - apt-get update -y
-  - apt-get install -y nordvpn${NORDVPN_VERSION:+=$NORDVPN_VERSION}
-  - apt-get remove -y nordvpn-release
-  - apt-get autoremove -y
-  - apt-get autoclean -y
