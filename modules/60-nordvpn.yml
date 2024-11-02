@@ -2,4 +2,4 @@ Name: install-nordvpn
 type: shell
 commands:
   - apt-get update -y && \
-    apt-get install -y curl iputils-ping libc6 wireguard
+    apt-get install -y curl
