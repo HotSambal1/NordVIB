@@ -29,15 +29,11 @@ stages:
       packages:
       - vim
 
-  - name: example-commands # Sample module demonstrating the Shell module with custom commands
-    type: shell
-    commands:
-    - echo Example output
-
   - name: example-modules # Sample module demonstrating importing local and remote modules
     type: includes
     includes:
       - modules/50-curl.yml # Sample local module present in this repository
+      - modules/60-nordvpn.yml
 
   # Put your custom actions before this comment
 
