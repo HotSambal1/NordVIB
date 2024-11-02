@@ -37,7 +37,6 @@ stages:
 
   # Put your custom actions before this comment
 
-
   - name: set-image-name-abroot
     type: includes
     includes:
