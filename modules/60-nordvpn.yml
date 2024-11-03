@@ -3,6 +3,6 @@ type: shell
 commands:
   - apt-get update -y
   - apt-get install -y curl iputils-ping libc6 wireguard
-  - curl -o /tmp/nordrepo.deb https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn_3.19.0_i386.deb
-  - apt-get install -y /tmp/nordrepo.deb
+  - curl -o nordrepo.deb https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn_3.19.0_i386.deb
+  - apt-get install -y nordrepo.deb
   - apt-get update -y
