@@ -1,5 +1,0 @@
-name: curl-packages # Install curl
-type: apt
-source:
-  packages:
-  - curl
