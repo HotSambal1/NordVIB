@@ -9,5 +9,5 @@ commands:
   - apt-get install -y --no-install-recommends nordvpn
   - apt-get clean
   - rm -rf /var/lib/apt/lists/*
-  - bash /etc/init.d/nordvpn start
+  - bash /etc/init.d/nordvpn start   #service nordvpn start
   - sleep 5
