@@ -19,8 +19,8 @@ stages:
     type: shell
     commands:
     - lpkg --unlock
-    - apt-get update
-    - apt-get upgrade -y
+    # - apt-get update
+    # - apt-get upgrade -y
 
  # Put your custom actions behind this comment
 
