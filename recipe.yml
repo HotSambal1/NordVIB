@@ -20,15 +20,16 @@ stages:
     commands:
     - lpkg --unlock
     - apt-get update
+    - apt-get upgrade -y
 
  # Put your custom actions behind this comment
 
-  - name: remote-packages  # install packages from remote repositories
-    type: apt
-    source:
-      packages:
+  # - name: remote-packages  # install packages from remote repositories
+    # type: apt
+    # source:
+      # packages:
         #- libfuse2t64
-        - gnome-tweaks
+        # - gnome-tweaks
 
   - name: example-modules # Sample module demonstrating importing local and remote modules
     type: includes
