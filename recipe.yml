@@ -19,7 +19,7 @@ stages:
     type: shell
     commands:
     - lpkg --unlock
-    # - apt-get update
+    - apt-get update
     # - apt-get upgrade -y
 
  # Put your custom actions behind this comment
@@ -34,7 +34,7 @@ stages:
   - name: example-modules # Sample module demonstrating importing local and remote modules
     type: includes
     includes:
-      - modules/50-install-debs.yml # Sample local module present in this repository
+      # - modules/50-install-debs.yml # Sample local module present in this repository
       - modules/60-nordvpn.yml
 
   # Put your custom actions before this comment
