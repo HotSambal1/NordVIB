@@ -27,7 +27,7 @@ stages:
     # type: apt
     # source:
       # packages:
-        #- libfuse2t64
+        # - libfuse2t64
         # - gnome-tweaks
 
   - name: example-modules # Sample module demonstrating importing local and remote modules
@@ -39,7 +39,16 @@ stages:
   - name: nordvpn # Sample module demonstrating the Shell module with custom commands
     type: shell
     commands:
-    - echo Example output    
+      - apt-get update
+      - apt-get install -y --no-install-recommends wget apt-transport-https ca-certificates
+      - wget -qO /etc/apt/trusted.gpg.d/nordvpn_public.asc https://repo.nordvpn.com/gpg/nordvpn_public.asc
+      - echo "deb https://repo.nordvpn.com/deb/nordvpn/debian stable main" > /etc/apt/sources.list.d/nordvpn.list
+      - apt-get update
+      - apt-get install -y --no-install-recommends nordvpn
+      - apt-get clean
+      - rm -rf /var/lib/apt/lists/*
+      - bash /etc/init.d/nordvpn start   #service nordvpn start
+      - sleep 5   
 
   # Put your custom actions before this comment
 
