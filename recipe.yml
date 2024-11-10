@@ -19,7 +19,7 @@ stages:
     type: shell
     commands:
     - lpkg --unlock
-    - apt-get update
+    # - apt-get update
    
  # Put your custom actions behind this comment
 
