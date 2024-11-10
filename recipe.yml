@@ -1,5 +1,5 @@
 name: nordvib # Replace this name with your image name
-id: custom # Replace this ID with your image ID
+id: nord # Replace this ID with your image ID
 stages:
 - id: build
   base: ghcr.io/vanilla-os/desktop:main # Optionally, Replace this image URL with a different one i.e. nvidia:main, etc
@@ -19,7 +19,7 @@ stages:
     type: shell
     commands:
     - lpkg --unlock
-    # - apt-get update
+    - apt-get update
    
  # Put your custom actions behind this comment
 
