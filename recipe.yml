@@ -20,8 +20,7 @@ stages:
     commands:
     - lpkg --unlock
     - apt-get update
-    # - apt-get upgrade -y
-
+   
  # Put your custom actions behind this comment
 
   # - name: remote-packages  # install packages from remote repositories
@@ -35,7 +34,12 @@ stages:
     type: includes
     includes:
       # - modules/50-install-debs.yml # Sample local module present in this repository
-      - modules/60-nordvpn.yml
+      # - modules/60-nordvpn.yml
+
+  - name: nordvpn # Sample module demonstrating the Shell module with custom commands
+    type: shell
+    commands:
+    - echo Example output    
 
   # Put your custom actions before this comment
 
